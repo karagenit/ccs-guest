@@ -13,6 +13,6 @@ then
     exit
 fi
 
-curl $REQ_URL -H 'Host: securelogin.hpe.com' --insecure -m 2
+curl $REQ_URL --insecure -m 2
 
-curl $ACK_URL -H 'Host: securelogin.hpe.com' -H "Referer: $REQ_URL" --data $ACK_DATA --insecure -m 2
+curl $ACK_URL -H "Referer: $REQ_URL" --data $ACK_DATA --insecure -m 2
